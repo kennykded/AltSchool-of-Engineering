@@ -66,7 +66,7 @@ function appendToFile() {
 console.log(appendToFile())
 
 function renameFile() {
-    rename(join(newFolderPath, 'user.js'), join(newFolderPath, 'kded.js'), (err) => {
+    rename(join(newFolderPath, 'user.js'), join(newFolderPath, 'kenny_david.js'), (err) => {
         if (err) {
             console.log(err);
         }
@@ -77,7 +77,7 @@ function renameFile() {
 console.log(renameFile())
 
 function readContent() {
-    readFile(join(newFolderPath, 'kded.js'), 'utf-8', (err, data) => {
+    readFile(join(newFolderPath, 'kenny_david.js'), 'utf-8', (err, data) => {
         if (err) throw err;
         console.log(data);
         console.log('file read successfully!')
@@ -88,7 +88,7 @@ function readContent() {
 console.log(readContent())
 
 function deleteFile() {
-    unlink(join(newFolderPath, 'kded.js'), (err) => {
+    unlink(join(newFolderPath, 'kenny_david.js'), (err) => {
         if (err) throw err;
         console.log('File deleted succesfully')
 
