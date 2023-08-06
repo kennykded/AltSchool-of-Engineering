@@ -1,4 +1,4 @@
-Altschool-NodeJs-Ass1
+Altschool-NodeJs-Core-Assignment
 Core Modules
 
 Write a program to do the following using, path, os and process modules: Print out the current working directory Print out the separator of a given file path Print out the extension name of a file path Print out the process id of the current running process Print out the user information of the os Print out the platform of an operating system
