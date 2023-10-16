@@ -5,7 +5,7 @@ const port = 7000
 
 const requestListener = function(req, res) {
     res.writeHead(200)
-    res.write('Hello World!,\nWelcome to my first NodeJs server')
+    res.write('Hello World! \nWelcome to my first NodeJs server')
     res.end()
 }
 
