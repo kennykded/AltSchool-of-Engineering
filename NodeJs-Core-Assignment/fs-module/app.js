@@ -7,6 +7,8 @@ let newFolderPath = join(cwd, 'Names');
 let myName = 'Kenny David'
 let moreDetails = `age: 30\n sex:Male \n phoneNumber: 0703864XXXX \n role:Backend Engineer`
 
+
+// Create directory/folder named: “Students”
 function makeDirectory() {
     mkdir(folderPath, (err) => {
         if (err) {
@@ -19,6 +21,7 @@ function makeDirectory() {
 console.log(makeDirectory());
 
 
+// In the Students directory, create a file named user.js 
 function writeToFile() {
     writeFile(join(folderPath, 'user.js'), 'Hello World', (err) => {
         if (err) {
@@ -31,7 +34,7 @@ function writeToFile() {
 console.log(writeToFile());
 
 
-
+// Update the Students directory to “Names”
 function renameDirectory() {
     rename(folderPath, newFolderPath, (err) => {
         if (err) {
@@ -43,6 +46,8 @@ function renameDirectory() {
 }
 console.log(renameDirectory())
 
+
+// Add your name as content to the file user.js
 function reWriteToFile() {
     writeFile(join(newFolderPath, 'user.js'), myName, (err) => {
         if (err) {
@@ -54,6 +59,8 @@ function reWriteToFile() {
 }
 console.log(reWriteToFile())
 
+
+// Update the file and add your age, sex, nationality, phone number and any other information about yourself
 function appendToFile() {
     appendFile(join(newFolderPath, 'user.js'), moreDetails, err => {
         if (err) {
@@ -65,6 +72,8 @@ function appendToFile() {
 }
 console.log(appendToFile())
 
+
+// Update the file user.js to {your_name}.js
 function renameFile() {
     rename(join(newFolderPath, 'user.js'), join(newFolderPath, 'kenny_david.js'), (err) => {
         if (err) {
@@ -76,6 +85,8 @@ function renameFile() {
 }
 console.log(renameFile())
 
+
+// Read the contents from {your_name}.js. User fs.open or fs.readFile
 function readContent() {
     readFile(join(newFolderPath, 'kenny_david.js'), 'utf-8', (err, data) => {
         if (err) throw err;
@@ -87,6 +98,8 @@ function readContent() {
 }
 console.log(readContent())
 
+
+// Delete the file {your_name}.js
 function deleteFile() {
     unlink(join(newFolderPath, 'kenny_david.js'), (err) => {
         if (err) throw err;
@@ -97,6 +110,7 @@ function deleteFile() {
 console.log(deleteFile())
 
 
+// Delete the directory “Names”
 function deleteDirectory() {
     rmdir(newFolderPath, (err) => {
         if (err) throw err
